@@ -1,0 +1,244 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Panadería 3 de Diciembre</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f8f3ee;
+            color: #333;
+        }
+
+        header {
+            margin-bottom: 25px;
+        }
+
+        .portada {
+            max-width: 1000px;
+            margin: 0 auto 20px;
+        }
+
+        .portada img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        h1, h2, h3 {
+            color: #6b3e26;
+        }
+
+        nav {
+            background: #4a2c1a;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background: #805438;
+        }
+
+        .contenedor-productos {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            max-width: 1150px;
+            margin: 25px auto;
+        }
+
+        .producto {
+            background: #fffaf5;
+            width: 100%;
+            max-width: 350px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid #eadfd3;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s;
+        }
+
+        .producto:hover {
+            transform: translateY(-5px);
+        }
+
+        .producto img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .precio {
+            font-size: 22px;
+            font-weight: bold;
+            color: #4a2c1a;
+        }
+
+        .boton-whatsapp {
+            display: inline-block;
+            background: #138b59;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .boton-whatsapp:hover {
+            background: #0d7047;
+        }
+
+        .seccion-contacto {
+            background: white;
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .enlace {
+            display: inline-block;
+            color: #6b3e26;
+            font-weight: bold;
+            margin: 8px;
+        }
+
+        .boton-flotante {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 14px 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        footer {
+            margin-top: 35px;
+            padding: 20px;
+            color: #6b3e26;
+        }
+
+        @media (max-width: 1000px) {
+            .contenedor-productos {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 10px;
+            }
+
+            .contenedor-productos {
+                grid-template-columns: 1fr;
+            }
+
+            .portada img {
+                height: 200px;
+            }
+
+            nav a {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body id="inicio">
+
+    <header>
+        <div class="portada">
+            <img src="imagenes/frente.png" alt="Frente de la panadería">
+        </div>
+
+        <h1>🥖 Panadería 3 de Diciembre</h1>
+        <p>Productos caseros, frescos y hechos con amor ❤️</p>
+    </header>
+
+    <nav>
+        <a href="portada.html">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#ubicacion">Ubicación</a>
+    </nav>
+
+    <section id="productos">
+        <h2>🥐 Nuestros productos</h2>
+        <p>Elegí tus favoritos y hacé tu pedido por WhatsApp.</p>
+
+        <div class="contenedor-productos">
+
+            <article class="producto">
+                <img src="imagenes/rosca.jpeg" alt="Rosca casera">
+                <h3>Rosca casera</h3>
+                <p>Rica, fresca y hecha con cariño.</p>
+                <p class="precio">$10.000</p>
+                <a class="boton-whatsapp" href="https://wa.me/5492323662237?text=Hola%2C%20quiero%20pedir%20una%20rosca%20casera" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+            </article>
+
+            <article class="producto">
+                <img src="imagenes/pan.png" alt="Pan casero">
+                <h3>Pan</h3>
+                <p>Pan fresco para acompañar tus comidas.</p>
+                <p class="precio">$2.600</p>
+                <a class="boton-whatsapp" href="https://wa.me/5492323662237?text=Hola%2C%20quiero%20pedir%20pan" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+            </article>
+
+            <article class="producto">
+                <img src="imagenes/factura.jpg" alt="Facturas">
+                <h3>Facturas por docena</h3>
+                <p>Ideales para compartir en familia.</p>
+                <p class="precio">$10.000</p>
+                <a class="boton-whatsapp" href="https://wa.me/5492323662237?text=Hola%2C%20quiero%20pedir%20una%20docena%20de%20facturas" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+            </article>
+
+            <article class="producto">
+                <img src="imagenes/torta.jpg" alt="Torta">
+                <h3>Tortas</h3>
+                <p>Consultanos por las opciones disponibles.</p>
+                <p class="precio">Desde $30.000</p>
+                <a class="boton-whatsapp" href="https://wa.me/5492323662237?text=Hola%2C%20quiero%20consultar%20por%20las%20tortas" target="_blank" rel="noopener">Consultar</a>
+            </article>
+
+            <article class="producto">
+                <img src="imagenes/huevos.jpg" alt="Maple de huevos">
+                <h3>Maple de huevos</h3>
+                <p>Consultá disponibilidad.</p>
+                <p class="precio">$7.500</p>
+                <a class="boton-whatsapp" href="https://wa.me/5492323662237?text=Hola
